@@ -1,4 +1,5 @@
 import fileinput
+from collections.abc import Iterable
 
 
 def main():
@@ -8,7 +9,7 @@ def main():
     print(part_2(instructions))
 
 
-def part_1(instructions: list[str]) -> int:
+def part_1(instructions: Iterable[str]) -> int:
     keypad = ['123',
               '456',
               '789']
@@ -32,7 +33,7 @@ def part_1(instructions: list[str]) -> int:
     return int(''.join(code))
 
 
-def part_2(instructions: list[str]) -> str:
+def part_2(instructions: Iterable[str]) -> str:
     keypad = ['  1  ',
               ' 234 ',
               '56789',

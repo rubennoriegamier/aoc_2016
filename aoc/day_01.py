@@ -1,4 +1,5 @@
 from collections import deque
+from collections.abc import Iterable
 
 
 def main():
@@ -8,7 +9,7 @@ def main():
     print(part_2(instructions))
 
 
-def part_1(instructions: list[str]) -> int:
+def part_1(instructions: Iterable[str]) -> int:
     directions = deque([(1, 0), (0, 1), (-1, 0), (0, -1)])
     y = 0
     x = 0
@@ -21,7 +22,7 @@ def part_1(instructions: list[str]) -> int:
     return abs(y) + abs(x)
 
 
-def part_2(instructions: list[str]) -> int:
+def part_2(instructions: Iterable[str]) -> int:
     directions = deque([(1, 0), (0, 1), (-1, 0), (0, -1)])
     y = 0
     x = 0
