@@ -5,7 +5,7 @@ def main():
     print(part_2(compressed))
 
 
-def part_1(compressed):
+def part_1(compressed: str) -> int:
     decompressed_length = 0
     start = 0
 
@@ -20,8 +20,8 @@ def part_1(compressed):
         start = closing_parenthesis_idx + take + 1
 
 
-def part_2(compressed):
-    def solve(start, end):
+def part_2(compressed: str) -> int:
+    def solve(start: int, end: int) -> int:
         decompressed_length = 0
 
         while True:
